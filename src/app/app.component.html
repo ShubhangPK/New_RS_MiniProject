@@ -1,0 +1,42 @@
+<!---<h1>&nbsp;I Appreciate your effort ! Now sit back and get your favorite content recommended .</h1>
+<h2>&nbsp;{{title}}&nbsp;</h2><br>
+
+<nav>
+  <a routerLink="/dashboard">Land Page for Users</a>
+  &nbsp;&nbsp;
+  <a routerLink="/heroes">New User Picks</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+<h6>@ShubhangPK</h6>
+-->
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-6 offset-sm-3">
+
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- credits
+<div class="text-center">
+  <p>
+
+  </p>
+  <p>
+
+  </p>
+</div>
+-->
