@@ -6,8 +6,6 @@ import { FormsModule }    from '@angular/forms';
 import { fakeBackendProvider } from './_helpers';
 import {AlertService} from './_services';
 
-import { routing }        from './app.routing';
-
 import { AlertComponent } from './_components';
 
 import { AppComponent }         from './app.component';
@@ -29,7 +27,6 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    routing,
     HttpClientModule
   ],
   declarations: [

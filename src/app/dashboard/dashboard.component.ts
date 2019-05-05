@@ -36,7 +36,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
+      .subscribe(heroes => {
+          this.heroes = heroes}
+      );
   }
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
@@ -50,8 +52,8 @@ deleteUser(id: number) {
 }
 
 private loadAllUsers() {
-    this.userService.getAll().pipe(first()).subscribe(users => {
-        this.users = users;
-    });
+    // this.userService.getAll().pipe(first()).subscribe(users => {
+    //     this.users = users;
+    // });
 }
 }
